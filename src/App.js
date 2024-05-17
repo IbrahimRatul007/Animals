@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import data from "./data/data.json";
+import Animals from "./components/Animals";
+import Search from "./components/Search";
+import Names from "./components/Names";
+import { useState } from "react";
 
 function App() {
+  const [checkedNames, setCheckedNames] = useState([]);
+
+  // console.log(checkedNames);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul className="animals">
+        {data.map((animal) => (
+          <Animals animal={animal} checkedNames={checkedNames} />
+        ))}
+      </ul>
+      <ul className="animal-names">
+        {data.map((animal) => (
+          <Names animal={animal} setCheckedNames={setCheckedNames} />
+        ))}
+      </ul>
+      <Search />
     </div>
   );
 }

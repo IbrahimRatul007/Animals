@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+.animals{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  background-color: tomato;
+  height: 30vh;
+}
+.emoji{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.emoji:hover{
+  scale: 1.2;
+}
+
+.search{
+  width: 50em;
+  height: 3em;
+  border-radius: 10px;
+}
+
+.animal-names{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: firebrick;
+  height: 10em;
+}

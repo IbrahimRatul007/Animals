@@ -1,0 +1,17 @@
+[
+    {
+    "name" : "tiger",
+    "emoji" : "🐯"
+    },
+
+    {
+    "name" : "lion",
+    "emoji" : "🦁"
+    },
+    
+    {
+    "name": "gorilla",
+    "emoji":"🦍"    
+    }
+
+]
